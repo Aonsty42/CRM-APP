@@ -1,0 +1,46 @@
+<!-- Summary Informations -->
+<h3>รายชื่อผู้ติดต่อ</h3>
+<div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <mat-icon>people</mat-icon>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).contact.contactName}}</span>
+    </div>
+    <hr>
+    <div fxLayout="row wrap" fxLayoutAlign="start start">
+        <mat-icon>call</mat-icon>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).contact.contactPhoneNo}}</span>
+    </div>
+</div>
+<br>
+<h3>รายละเอียดลูกค้า</h3>
+<div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <mat-icon>business</mat-icon>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).customer?.customerName}}</span>
+    </div>
+    <hr>
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <mat-icon>call</mat-icon>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).customer?.customerPhoneNo}}</span>
+    </div>
+    <hr>
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <mat-icon>language</mat-icon>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).customer?.customerWebSite}}</span>
+    </div>
+    <hr>
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <mat-icon>place</mat-icon>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).customer?.customerAddress}}</span>
+    </div>
+</div>
+<br>
+<h3>รายละเอียดความต้องการลูกค้า</h3>
+<div fxLayout="column">
+    <p><span style="max-width: 140px; word-wrap: break-word;">{{(model |
+            async).dealType || 'ไม่ระบุ'}}</span></p>
+    <p>ราคาทุนโดยประมาณ: <span style="max-width: 140px; word-wrap: break-word;">{{(model |
+            async).dealUnitCost || 'ไม่ระบุ'}}</span></p>
+    <p>รายละเอียดเพิ่มเติม: <span style="max-width: 140px; word-wrap: break-word;">{{(model |
+            async).dealDetail || 'ไม่ระบุ'}}</span></p>
+</div>

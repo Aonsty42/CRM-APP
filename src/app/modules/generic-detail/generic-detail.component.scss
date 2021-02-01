@@ -1,0 +1,17 @@
+.mat-drawer-container {
+  width: 100%;
+  min-height: calc(100vh - 175px);
+
+  .left-panel {
+    padding: 10px;
+    width: 20%;
+  }
+
+  .right-panel {
+    width: 40%;
+  }
+
+  .content-panel {
+    width: 80%;
+  }
+}

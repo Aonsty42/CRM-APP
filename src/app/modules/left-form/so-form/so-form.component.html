@@ -1,0 +1,12 @@
+<div fxLayout="column">
+    <div fxLayout="row wrap" fxLayoutAlign="start start">
+        <span>วันที่เอกสาร:</span>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).docDate | date:"dd/MM/yyyy"}}</span>
+    </div>
+    
+</div>
+<div>
+    <h3>อ้างอิงใบเสนอราคา</h3>
+    <p style="padding-left: 10px;flex-grow: 3;" *ngFor="let item of (model | async).refDocs">{{item.docNo}}</p>
+   
+</div>

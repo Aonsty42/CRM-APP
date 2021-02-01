@@ -1,0 +1,91 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #maindrawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="'side'" [opened]="true" *ngIf="auth.authStateObservable$ | async">
+    <mat-nav-list fxFill fxLayout="column" fxLayoutAlign="start center">
+      <div fxFlex="1 0 auto" fxLayout="column" fxLayoutAlign="start center">
+        <mat-toolbar>
+          <img class="app-logo" src="../../../assets/image/logo/aon-logo.svg" alt="">
+        </mat-toolbar>
+        <a [routerLink]="['/deals']" routerLinkActive="router-link-active">
+          <button mat-icon-button>
+            <mat-icon class="icon-handshake"></mat-icon>
+          </button>
+        </a>
+        <a [routerLink]="['/contact']" routerLinkActive="router-link-active">
+          <button mat-icon-button>
+            <mat-icon class="icon-people"></mat-icon>
+          </button>
+        </a>
+        <a [routerLink]="['/customer']" routerLinkActive="router-link-active">
+          <button mat-icon-button>
+            <mat-icon class="icon-building"></mat-icon>
+          </button>
+        </a>
+        <!-- <a [routerLink]="['/activities']" routerLinkActive="router-link-active">
+          <button mat-icon-button>
+            <mat-icon class="icon-clipboard"></mat-icon>
+          </button>
+        </a>
+        <a [routerLink]="['/notes']" routerLinkActive="router-link-active">
+          <button mat-icon-button>
+            <mat-icon>note</mat-icon>
+          </button>
+        </a> -->
+        <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+          <button mat-icon-button>
+            <mat-icon>dashboard</mat-icon>
+          </button>
+        </a>
+      </div>
+      <div fxFlex="0 1 auto" fxLayout="column" fxLayoutAlign="end center">
+        <a [routerLink]="['/settings']" routerLinkActive="router-link-active">
+          <button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+
+        </a>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-progressbar *ngIf="auth.authStateObservable$ | async"></app-progressbar>
+    <mat-toolbar *ngIf="auth.authStateObservable$ | async">
+      <div fxFill fxLayout="row" fxLayoutAlign="start center">
+        <div fxFlex="1 0 auto" fxLayout="row" fxLayoutAlign="start center">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="maindrawer.toggle()"
+            *ngIf="isHandset$ | async">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span>Module Name</span>
+        </div>
+        <div class="" fxFlex="0 1 auto" fxLayout="row" fxLayoutAlign="start center">
+          <!-- <button type="button" mat-icon-button>
+            <mat-icon>notifications</mat-icon>
+          </button> -->
+          <div fxFlex fxLayout="column" fxLayoutAlign="start center" class="user-info-bar">
+            <h3>Koh Theerasak</h3>
+            <span>Cyber Advance System And Network</span>
+          </div>
+          <button mat-icon-button>
+            <div class="user-button" [matMenuTriggerFor]="userMenu" fxFlex fxLayout="row" fxLayoutAlign="center center">
+              KT
+            </div>
+          </button>
+
+          <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item (click)="logout()">
+              <mat-icon>exit_to_app</mat-icon>
+              <span>Logout</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+
+    </mat-toolbar>
+    <mat-toolbar class="sub-toolbar" color="primary" *ngIf="auth.authStateObservable$ | async">
+      <span>{{pageName$ | async | json | titleurl | titlecase}}</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet> </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

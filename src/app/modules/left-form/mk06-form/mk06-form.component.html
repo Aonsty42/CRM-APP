@@ -1,0 +1,28 @@
+<div fxLayout="column">
+    <div fxLayout="row wrap" fxLayoutAlign="start start">
+        <span>วันที่เอกสาร:</span>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).docDate | date:"dd/MM/yyyy"}}</span>
+    </div>
+    <hr>
+    <div fxLayout="row wrap" fxLayoutAlign="start start">
+        <span>กำหนดส่ง:</span>
+        <span style="padding-left: 10px;flex-grow: 3;">{{(model | async).dueDate | date:"dd/MM/yyyy"}}</span>
+    </div>
+</div>
+<h3>ประเภทสินค้า</h3>
+<span style="padding-left: 10px;flex-grow: 3;">{{(model | async).productCategory}}</span>
+<!-- productTexture -->
+<h3>ลักษณะเนื้อ</h3>
+<span style="padding-left: 10px;flex-grow: 3;">{{(model | async).productTexture}}</span>
+<h3>คุณสมบัติที่ต้องการ</h3>
+<p style="padding-left: 10px;flex-grow: 3;" *ngFor="let item of (model | async).productPropDesc">{{item}}</p>
+<h3>สารสำคัญที่ต้องการ</h3>
+<p style="padding-left: 10px;flex-grow: 3;" *ngFor="let item of (model | async).productMateDesc">{{item}}</p>
+<p style="padding-left: 10px;flex-grow: 3;">{{(model | async).productMateOtherDesc}}</p>
+<h3>จำนวนที่ต้องการ</h3>
+<p style="padding-left: 10px;flex-grow: 3;">{{(model | async).reqQty}} {{(model | async).unit}}</p>
+<h3>สิ่งที่แนบมาด้วย</h3>
+<p style="padding-left: 10px;flex-grow: 3;" *ngFor="let item of (model | async).attachments">{{item}}</p>
+<p>
+    <!-- {{model | async | json}} -->
+</p>

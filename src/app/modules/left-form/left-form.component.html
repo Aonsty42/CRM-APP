@@ -1,0 +1,7 @@
+<app-contact-form *ngIf="(model | async).layout === 'contacts'" [model]="model"></app-contact-form>
+<app-customer-form *ngIf="(model | async).layout === 'customers'" [model]="model"></app-customer-form>
+<app-deal-form *ngIf="(model | async).layout === 'deals'" [model]="model"></app-deal-form>
+<app-mk06-form *ngIf="(model | async).layout === 'fm-mk-06'" [model]="model"></app-mk06-form>
+<app-mk13-form *ngIf="(model | async).layout === 'fm-mk-13'" [model]="model"></app-mk13-form>
+<app-mk11-form *ngIf="(model | async).layout === 'fm-mk-11'" [model]="model"></app-mk11-form>
+<app-so-form *ngIf="(model | async).layout === 'so'" [model]="model"></app-so-form>
