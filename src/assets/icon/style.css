@@ -57,3 +57,6 @@
   content: "\e907";
   color: rgb(10, 8, 8);
 }
+.icon-chat::before {
+  color: rgb(10, 8, 8);
+}

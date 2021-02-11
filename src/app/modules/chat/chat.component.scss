@@ -1,0 +1,102 @@
+.mat-drawer-container {
+  width: 100%;
+  min-height: calc(100vh - 105px);
+
+  .left-panel {
+    padding: 10px;
+    width: 20%;
+    background-color: white;
+  }
+
+  .right-panel {
+    width: 30%;
+  }
+
+  .content-panel {
+    width: auto;
+    height: 45pc;
+
+  }
+}
+.user-button {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background-color: black;
+  border-radius: 50%;
+  color: aliceblue;
+}
+
+.messege{
+  font-size: 14px;
+}
+.avatarcard{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.chatcard{
+  // height: 70px;
+  background-color: aliceblue;
+}
+.search{
+  width: 150px;
+  height: 30px;
+  margin-bottom: 4px;
+  margin-left: 50px;
+  box-shadow: black;
+}
+
+.proflie{
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+
+}
+.left-chat{
+  // position: absolute;
+  // margin-left: 10px;
+  // margin-top: 10px;
+  // height: 10px;
+  padding: 10px;
+  background-color: rgb(224, 253, 255);
+  border-radius: 10px;
+
+}
+
+.right-chat{
+  // position: absolute;
+  // margin-right: 10px;
+  background-color: #93f5d8;
+  // height: 10px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+ .chatzone{
+
+   margin-top: 80px;
+ }
+ .leftchat{
+   margin-top: -10px;
+
+ }
+ .toolbar{
+   position: sticky;
+   top: 0;
+ }
+ .chatfield{
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+ }
+ .note{
+   border-top: 1px solid black;
+ }
+
+
+
+
+
