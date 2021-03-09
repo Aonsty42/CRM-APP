@@ -10,14 +10,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import { MatListModule} from '@angular/material/list';
-import { MatMenuModule} from '@angular/material/menu'
+import { MatMenuModule} from '@angular/material/menu';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatTooltipModule} from '@angular/material/tooltip'
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
@@ -33,6 +36,7 @@ import { FormbaseComponent } from './component/formbase/formbase.component';
 import { TablebaseComponent } from './component/formbase/tablebase.component'
 import { DirectivesModule } from './directives/directives.module';
 import { PipesModule } from './pipes/pipes.module';
+
 @NgModule({
   declarations: [FormbaseComponent, TablebaseComponent],
   imports: [
@@ -64,6 +68,9 @@ import { PipesModule } from './pipes/pipes.module';
     MatSelectModule,
     MatStepperModule,
     MatAutocompleteModule,
+    MatChipsModule,
+
+    MatTooltipModule,
 
     DirectivesModule,
     PipesModule
@@ -98,6 +105,9 @@ import { PipesModule } from './pipes/pipes.module';
     MatSelectModule,
     MatStepperModule,
     MatAutocompleteModule,
+    MatChipsModule,
+
+    MatToolbarModule,
 
     DirectivesModule,
     PipesModule,

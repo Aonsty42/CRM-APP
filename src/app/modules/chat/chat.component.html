@@ -16,8 +16,8 @@
       </div>
     </div>
     <hr>
-    <div fxLayout="column wrap" class="chatcard" (click)="toggle()" *ngFor="let item of data">
-      <div fxLayoutAlign="end stretch" class="messege">Today</div>
+    <div fxLayout="column wrap" class="chatcard" (click)="toggle()" *ngFor="let item of profile">
+      <div fxLayoutAlign="end stretch" class="messege"> {{item.messages.data[0].created_time | date:'shortTime'}}</div>
       <div fxLayout="row wrap" fxFlex>
         <div fxLayoutAlign="center center" fxFlex="30">
 
@@ -26,37 +26,49 @@
         <div fxFlexLayout="center wrap" fxFlex="70" fxFlexLayoutAlign="start stretch">
           <div class="name">
             <strong>
-              {{item.contactName}}
+              {{item.senders.data[0].name}}
             </strong>
-            <div class="messege">{{item.contactMes}}</div>
+            <div class="messege">{{item.snippet}}</div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <hr>
-    <div fxLayout="column wrap" class="chatcard" (click)="toggle()">
-      <div fxLayoutAlign="end stretch" class="messege">Today</div>
-      <div fxLayout="row wrap" fxFlex>
-        <div fxLayoutAlign="center center" fxFlex="30">
-          <img class="avatarcard" src="../../../assets/image/o398xcu17gm5X8zwDa5-o.jpg">
-        </div>
-        <div fxFlexLayout="center wrap" fxFlex="70" fxFlexLayoutAlign="start stretch">
-          <div class="name">
-            <strong>
-              Laws
-            </strong>
-            <div class="messege">Hey</div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+
 
   </mat-drawer>
 
 
   <mat-drawer-content class="content-panel">
     <mat-toolbar class="toolbar">
-      <div fxLayout="row" fxLayoutAlign="start center" fxFlex="10">
+      <div fxFill fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayoutAlign="start center" fxLayout="row" fxFlex="1 0 auto">
+          <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
+          <div class="name" fxLayoutAlign="start center" fxFlex='45'>
+            <span>
+              Luffy
+            </span>
+          </div>
+        </div>
+
+        <div fxLayout="row" fxFlex="0 1 auto" class="" fxLayoutAlign="start center">
+          <button mat-stroked-button>
+            <mat-icon>question_answer</mat-icon>Fowlow
+          </button>
+        </div>
+        <div fxLayout="row" fxFlex="0 1 auto" class="" fxLayoutAlign="start center">
+          <button mat-stroked-button>
+            <mat-icon>announcement</mat-icon>
+            Resolve
+          </button>
+        </div>
+        <div fxLayout="row" fxFlex="0 1 auto" class="" fxLayoutAlign="start center">
+          <button mat-stroked-button>
+            <mat-icon>search</mat-icon>Search
+          </button>
+        </div>
+
+      </div>
+      <!-- <div fxFill fxLayout="row" fxLayoutAlign="start center" >
         <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
       </div>
       <div fxLayout="row" class="name" fxLayoutAlign="start center" fxFlex="45">
@@ -79,99 +91,41 @@
         <button mat-stroked-button>
           <mat-icon>search</mat-icon>Search
         </button>
-      </div>
+      </div> -->
     </mat-toolbar>
-    <div fxLayout="column wrap">
-      <div fxLayout="row wrap">
-        <div fxLayoutAlign="center center">
-          <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
-        </div>
-        <div fxLayoutAlign="center start" class="leftchat">
-          <p class="left-chat"> Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        </div>
-      </div>
-      <div fxLayoutAlign="end stretch">
-        <p class="right-chat">Hiiiiiiiiiii</p>
-      </div>
-      <div fxLayout="row wrap">
-        <div fxLayoutAlign="center center">
-          <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
-        </div>
-        <div fxLayoutAlign="center start" class="leftchat">
-          <p class="left-chat"> Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        </div>
-      </div>
-      <div fxLayoutAlign="end stretch">
-        <p class="right-chat">Hiiiiiiiiiii</p>
-      </div>
-      <div fxLayout="row wrap">
-        <div fxLayoutAlign="center center">
-          <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
-        </div>
-        <div fxLayoutAlign="center start" class="leftchat">
-          <p class="left-chat"> Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        </div>
-      </div>
-      <div fxLayoutAlign="end stretch">
-        <p class="right-chat">Hiiiiiiiiiii</p>
-      </div>
-      <div fxLayout="row wrap">
-        <div fxLayoutAlign="center center">
-          <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
-        </div>
-        <div fxLayoutAlign="center start" class="leftchat">
-          <p class="left-chat"> Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        </div>
-      </div>
-      <div fxLayoutAlign="end stretch">
-        <p class="right-chat">Hiiiiiiiiiii</p>
-      </div>
-      <div fxLayout="row wrap">
-        <div fxLayoutAlign="center center">
-          <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
-        </div>
-        <div fxLayoutAlign="center start" class="leftchat">
-          <p class="left-chat"> Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        </div>
-      </div>
-      <div fxLayoutAlign="end stretch">
-        <p class="right-chat">Hiiiiiiiiiii</p>
-      </div>
-      <div fxLayout="row wrap">
-        <div fxLayoutAlign="center center">
-          <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
-        </div>
-        <div fxLayoutAlign="center start" class="leftchat">
-          <p class="left-chat"> Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        </div>
-      </div>
-      <div fxLayoutAlign="end stretch">
-        <p class="right-chat">Hiiiiiiiiiii</p>
-      </div>
-      <div fxLayout="row wrap">
-        <div fxLayoutAlign="center center">
-          <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
-        </div>
-        <div fxLayoutAlign="center start" class="leftchat">
-          <p class="left-chat"> Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        </div>
-      </div>
-      <div fxLayoutAlign="end stretch">
-        <p class="right-chat">Hiiiiiiiiiii</p>
-      </div>
-
-      <footer class="chatfield">
-        <mat-form-field class="chatbar" appearance="outline" fxFlex>
-          <input matInput placeholder="Enter Your Message here">
-          <div fxLayoutAlign="end center" fxLayout="row" fxFlex>
-            <mat-icon matSuffix>send</mat-icon>
-            <mat-icon matSuffix>add_circle_outline</mat-icon>
+    <div fxFill fxLayout="column" style=" padding: 10px">
+      <div *ngFor="let chat of messages">
+        <div fxLayout="row wrap" *ngFor="let item of chat.messaging">
+          <div fxLayoutAlign="center center">
+            <img class="avatarcard" src="../../../assets/image/0jUjAfPW_400x400.jpg">
           </div>
-        </mat-form-field>
-      </footer>
-
-
+          <div fxLayoutAlign="center start" class="leftchat">
+            <p class="left-chat">{{item.message.text}}</p>
+          </div>
+        </div>
+        <div fxLayoutAlign="end stretch" *ngIf="chat.messaging_type">
+          <p class="right-chat">{{chat.message.text}}</p>
+        </div>
+      </div>
     </div>
+
+    <footer class="footer">
+      <div fxLayout="column">
+        <div fxLayout="row" fxLayoutAlign="start center" style="width: auto !important;" fxFlex>
+          <mat-form-field class="chatbar" appearance="outline" fxFlex>
+            <input matInput placeholder="Enter Your Message here" [(ngModel)]="message">
+            <div fxLayoutAlign="end center" fxLayout="row" fxFlex>
+
+              <button mat-icon-button (click)="sendMessage()">
+                <mat-icon matSuffix>send</mat-icon>
+              </button>
+              <mat-icon matSuffix>add_circle_outline</mat-icon>
+            </div>
+          </mat-form-field>
+
+        </div>
+      </div>
+    </footer>
 
   </mat-drawer-content>
 
@@ -204,16 +158,15 @@
       <div fxLayout="row" class="note">
         <div fxLayoutAlign="start center" fxFlex="90">
           <strong>Note</strong>
-        </div >
+        </div>
 
         <div fxLayoutAlign="end center" fxFlex="10">
-          <button mat-icon-button [routerLink]="['/note']" routerLinkActive="router-link-active"><mat-icon>add_circle_outline</mat-icon> </button>
+          <button mat-icon-button [routerLink]="['/note']" routerLinkActive="router-link-active">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
         </div>
       </div>
-      <hr>
-      <hr>
-      <hr>
-      <hr>
+
       <div fxLayoutAlign="center center">
         <span>Add Note</span>
       </div>

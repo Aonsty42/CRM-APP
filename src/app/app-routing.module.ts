@@ -5,8 +5,8 @@ import { AuthGuard } from './modules/auth/auth.guard';
 const routes: Routes = [
 
   {
-    path : 'auth',
-    loadChildren :()=> import('./modules/auth/auth.module').then(m => m.AuthModule)
+    path: 'auth',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'deals',
@@ -40,7 +40,7 @@ const routes: Routes = [
     data: {
       masterApiUrl: 'fm-mk-06-dtl',
       lookupFields: ['hdr'],
-      layouts: ['bom','route', 'spec-result']
+      layouts: ['bom', 'route', 'spec-result']
     },
     canActivate: [AuthGuard]
   },
@@ -86,7 +86,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/generic-detail/generic-detail.module').then(m => m.GenericDetailModule),
     data: {
       masterApiUrl: 'contacts',
-      lookupFields: ['noteRelateID', 'relateToID',  'dealContact','contactAddress','contactPhoneNo', 'contactLineId'],
+      lookupFields: ['noteRelateID', 'relateToID', 'dealContact', 'contactAddress', 'contactPhoneNo', 'contactLineId'],
       layouts: ['notes', 'activitiestask', 'activitiesevent', 'activitiescall', 'deals']
     },
     canActivate: [AuthGuard]
@@ -117,7 +117,11 @@ const routes: Routes = [
   },
   {
     path: 'chat',
-    loadChildren: () => import('./modules/chat/chat.module').then(m => m.ChatModule )
+    loadChildren: () => import('./modules/chat/chat.module').then(m => m.ChatModule)
+  },
+  {
+    path: 'scrumboard',
+    loadChildren: () => import('./modules/scrumbord/scrumbord.module').then(m => m.ScrumbordModule)
   },
   {
     path: '**',

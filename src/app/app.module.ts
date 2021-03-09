@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Layout1Module } from './layout/layout1/layout1.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FakeDbService } from './fake-db/fake-db.service';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,17 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     BrowserAnimationsModule,
     HttpClientModule,
 
+    InMemoryWebApiModule.forRoot(FakeDbService, {
+      delay: 0,
+      passThruUnknownUrl: true
+    }),
+
 
     Layout1Module
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true},
-    { provide: MAT_DATE_LOCALE, useValue: 'en-GB'}
+    { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true },
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
   ],
   bootstrap: [AppComponent]
 })

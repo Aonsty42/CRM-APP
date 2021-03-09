@@ -14,7 +14,7 @@
 
   .content-panel {
     width: auto;
-    height: 45pc;
+    height: 85vh;
 
   }
 }
@@ -85,7 +85,7 @@
  }
  .toolbar{
    position: sticky;
-   top: 0;
+   top: 0px;
  }
  .chatfield{
   position: sticky;
@@ -95,6 +95,23 @@
  .note{
    border-top: 1px solid black;
  }
+ .footer {
+  position: sticky;
+  bottom: 0 !important;
+  background-color: white;
+  textarea {
+  height: 49px;
+  background-color: white;
+  }
+  button{
+  height: 50px;
+  background-color: white;
+
+  mat-icon{
+  color: gray;
+  }
+  }
+  }
 
 
 
