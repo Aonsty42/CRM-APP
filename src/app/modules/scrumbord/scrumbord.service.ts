@@ -49,6 +49,7 @@ export class ScrumbordService implements Resolve<any> {
   }
 
   getBoard(boardId): Promise<any> {
+    console.log("genid")
     return new Promise((resolve, reject) => {
       this._httpClient.get('api/scrumboard-boards/' + boardId)
         .subscribe((response: any) => {

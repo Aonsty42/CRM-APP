@@ -1,14 +1,12 @@
-@import "src/app/shared/scss/app";
+.scrumboard-board-card-dialog {
 
-.scrumboard-card-dialog {
+    // @include media-breakpoint('xs') {
+    //     width: 100%;
+    // }
 
-    @include media-breakpoint('xs') {
-        width: 100%;
-    }
-
-    @include media-breakpoint('gt-xs') {
-        width: 720px;
-    }
+    // @include media-breakpoint('gt-xs') {
+    //     width: 720px;
+    // }
 
     .mat-dialog-container {
         padding: 0;
@@ -66,9 +64,9 @@
                 width: 100%;
                 font-size: 22px;
 
-                @include media-breakpoint(xs) {
-                    font-size: 14px;
-                }
+                // @include media-breakpoint(xs) {
+                //     font-size: 14px;
+                // }
             }
 
             .sections {

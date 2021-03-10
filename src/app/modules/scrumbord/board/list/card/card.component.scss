@@ -1,4 +1,4 @@
-@import "src/app/shared/scss/app";
+
 
 scrumboard-board-card {
     position: relative;
@@ -95,15 +95,15 @@ scrumboard-board-card {
         user-select: none;
     }
 
-    &.gu-mirror {
-        position: fixed !important;
-        margin: 0 !important;
-        z-index: 9999 !important;
-        opacity: 0.8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-        filter: alpha(opacity=80);
-        @include mat-elevation(7);
-    }
+    // &.gu-mirror {
+    //     position: fixed !important;
+    //     margin: 0 !important;
+    //     z-index: 9999 !important;
+    //     opacity: 0.8;
+    //     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    //     filter: alpha(opacity=80);
+    //     @include mat-elevation(7);
+    // }
 
     &.gu-hide {
         display: none !important;

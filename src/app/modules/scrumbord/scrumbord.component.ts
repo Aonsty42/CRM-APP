@@ -8,7 +8,7 @@ import { Board } from './board.model'
 
 
 @Component({
-  selector: 'app-scrumbord',
+  selector: 'scrumbord',
   templateUrl: './scrumbord.component.html',
   styleUrls: ['./scrumbord.component.scss'],
   encapsulation: ViewEncapsulation.None,
@@ -39,7 +39,7 @@ export class ScrumbordComponent implements OnInit, OnDestroy {
     {
         const newBoard = new Board({});
         this._scrumboardService.createNewBoard(newBoard).then(() => {
-            this.router.navigate(['/modules/scrumbord/boards' + newBoard.id + '/' + newBoard.uri]);
+            this.router.navigate(['boards/' + newBoard.id + '/' + newBoard.uri]);
         });
     }
 

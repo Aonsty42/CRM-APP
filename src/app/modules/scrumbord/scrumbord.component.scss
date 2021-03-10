@@ -1,6 +1,6 @@
-@import "src/app/shared/scss/app";
 
-scrumboard {
+
+scrumbord {
   min-height: 100%;
 
     #boards {
@@ -32,9 +32,9 @@ scrumboard {
                 transition: box-shadow 150ms ease-in;
                 cursor: pointer;
 
-                &:hover:not(.add-new-board) {
-                    @include mat-elevation(8);
-                }
+                // &:hover:not(.add-new-board) {
+                //     @include mat-elevation(8);
+                // }
 
                 .board-name {
                     padding: 16px 32px 0 32px;

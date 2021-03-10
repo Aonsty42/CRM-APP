@@ -6,7 +6,7 @@
 
         <div fxLayout="row" fxLayoutAlign="center center" fxFlexOrder="2" fxFlexOrder.gt-xs="1">
           <button mat-raised-button class="header-boards-button" [ngClass]="board.settings.color+'-800'"
-            routerLink="/apps/scrumboard/boards" aria-label="boards button">
+            routerLink="/scrumboard" aria-label="boards button">
             <mat-icon class="mr-8">assessment</mat-icon>
             <span>BOARDS</span>
           </button>
@@ -24,9 +24,9 @@
         <div class="toolbar" fxLayout="row" fxLayoutAlign="space-between center" fxFlexOrder="3">
 
 
-          <!-- <button mat-icon-button (click)="settingsSidenav.toggle()" aria-label="Settings" matTooltip="Settings">
+          <button mat-icon-button (click)="settingsSidenav.toggle()" aria-label="Settings" matTooltip="Settings">
             <mat-icon>settings</mat-icon>
-          </button> -->
+          </button>
 
         </div>
         <!-- / TOOLBAR -->
@@ -57,7 +57,7 @@
       <!-- / BOARD -->
     </div>
   </div>
-  <!-- <mat-sidenav #settingsSidenav position="end">
+  <mat-sidenav #settingsSidenav position="end">
     <scrumboard-board-settings></scrumboard-board-settings>
-  </mat-sidenav> -->
+  </mat-sidenav>
 </mat-sidenav-container>

@@ -17,6 +17,9 @@ import { BoardResolve, ScrumbordService } from './scrumbord.service';
 import { NgxDnDModule } from '@swimlane/ngx-dnd';
 import { MatRippleModule } from '@angular/material/core';
 import { CardComponent } from './board/list/card/card.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { ScrumboardBoardColorSelectorComponent } from './board/sidenavs/board-color-selector/board-color-selector.component';
+import {ScrumboardCardDialogComponent} from './board/dialogs/card/card.component'
 
 
 const routes: Routes = [
@@ -28,13 +31,13 @@ const routes: Routes = [
       scrumbord: ScrumbordService
     },
   },
-  // {
-  //   path: 'boards/:boardId/:boardUri',
-  //   component: ScrumbordComponent,
-  //   resolve: {
-  //     board: BoardResolve
-  //   }
-  // },
+  {
+    path: 'boards/:boardId/:boardUri',
+    component: BoardComponent,
+    resolve: {
+      board: BoardResolve
+    }
+  },
   {
     path: '**',
     redirectTo: 'boards'
@@ -44,7 +47,20 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [ScrumbordComponent, BoardComponent, AddListComponent, EditBoardNameComponent, ListComponent, SettingsComponent, CardComponent, LabelSelectorComponent, AddCardComponent, EditListNameComponent],
+  declarations: [
+    ScrumbordComponent,
+    BoardComponent,
+    AddListComponent,
+    EditBoardNameComponent,
+    ListComponent,
+    SettingsComponent,
+    CardComponent,
+    LabelSelectorComponent,
+    AddCardComponent,
+    EditListNameComponent,
+    ScrumboardBoardColorSelectorComponent,
+    ScrumboardCardDialogComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -52,6 +68,7 @@ const routes: Routes = [
     MatRippleModule,
 
     NgxDnDModule,
+    MatTooltipModule,
 
   ],
   providers      : [
