@@ -1,4 +1,4 @@
-.scrumboard-board-card-dialog {
+.scrumboard-card-dialog {
 
     // @include media-breakpoint('xs') {
     //     width: 100%;
@@ -348,6 +348,8 @@
         max-height: 85vh;
         display: flex;
         flex-direction: column;
+        padding: 20px;
+        width: 700px;
     }
 }
 

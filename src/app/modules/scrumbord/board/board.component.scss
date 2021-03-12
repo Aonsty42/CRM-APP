@@ -100,6 +100,7 @@ app-board {
           .board-content-wrapper {
               position: relative;
 
+
               .board-content {
                   position: absolute;
                   top: 0;
@@ -110,6 +111,7 @@ app-board {
                   overflow-y: hidden;
                   overflow-x: auto;
                   -webkit-overflow-scrolling: touch;
+                  padding: 10px;
 
                   .list-sortable-placeholder {
                       background: rgba(0, 0, 0, 0.06);
